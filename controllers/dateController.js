@@ -5,8 +5,10 @@ module.exports = function (app) {
     app.get('/api/:date', function (req, res) {
         var date = req.params.date;
 
-        // if date is a valid number, make it a number
-        if (!isNaN(date)) date = Number(date);
+        // convert timestamp to number
+        if (!isNaN(date)) {
+            date = Number(date);
+        }
 
         if (!Date.create(date).isValid()) {
             res.json({
@@ -17,15 +19,12 @@ module.exports = function (app) {
             return;
         }
 
-        const naturalDate = Date.create(date).format('%A %B %e, %Y'); // ex: Saturday November 26, 2016
-        const calendarDate = Date.create(date).short(); // ex: 11/26/2016
-        const timestampDate = Date.create(date).format('%F'); // ex: 11-26-2016
-        const timestampUnix = Math.floor(new Date(timestampDate).getTime() / 1000); // ex: 1480118400
-
         res.json({
-            natural: naturalDate,
-            calendar: calendarDate,
-            unix: timestampUnix
+            input: date,
+            natural: Date.create(date).format('%A %B %e, %Y'),
+            calendar: Date.create(date).short(),
+            unixMilliseconds: Number(Date.create(date, { fromUTC: true }).format('{x}')),
+            unixSeconds: Math.floor(Number(Date.create(date, { fromUTC: true }).format('{x}')) / 1000)
         });
     });
 }
