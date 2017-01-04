@@ -1,9 +1,7 @@
-var express = require('express');
-var app = express();
-
+const express = require('express');
+const app = express();
 const PORT = process.env.PORT || 3000;
-
-var dateController = require('./controllers/dateController');
+const dateController = require('./controllers/dateController');
 
 dateController(app);
 
