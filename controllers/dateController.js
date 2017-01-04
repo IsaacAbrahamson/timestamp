@@ -1,5 +1,4 @@
-var Sugar = require('sugar-date');
-Sugar.extend();
+var Sugar = require('sugar-date').extend();
 
 module.exports = function (app) {
     app.get('/api/:date', function (req, res) {
