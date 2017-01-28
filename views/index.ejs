@@ -1,36 +1,42 @@
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-<link href="assets/style.css" type="text/css" rel="stylesheet" />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<section id="intro">
-  <div class="centered">
-    <h1>Timestamp Microservice</h1>
-    <h3>By <a href="https://github.com/IsaacAbrahamson" target="_blank">Isaac Abrahamson</a></h3>
-  </div>
-</section>
-<section id="usage">
-  <div class="content">
-    <p>Simple API for getting natural dates, calendar dates, and Unix timestamps (in milliseconds). All returned information by default is in JSON format and UTC time.</p>
-    <h3>Example Usage:</h2>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/today</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/yesterday</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/now</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/07-04-1776</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/1776-07-04</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/July 4, 1776</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/the 4th of July</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/July</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/-6106060800000</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/the 25th</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/5 years ago</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/two weeks from now</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/Wed, 03 Jul 2008 08:00:00 EST</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/Dec 25th of last year</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/the last day of February</pre></code>
-    <pre><code>https://isaacabrahamson-timestamp.herokuapp.com/api/two days after tomorrow</pre></code>
-    <br>
-    <p>Please check out <a href="https://sugarjs.com/dates/" target="_blank">Sugar.js Dates</a> for more information.</p>
-  </div>
-</section>
-<footer>
-  <h3>Made with <%= heart %> and <%= pizza %> for <a href="https://www.freecodecamp.com/challenges/timestamp-microservice" target="_blank">Free Code Camp Back-End API Project</a></h3>
-</footer>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="assets/style.css" type="text/css" rel="stylesheet" />
+</head>
+ 
+<body>
+  <section id="intro">
+    <div class="centered">
+      <h1>Timestamp Microservice</h1>
+      <h3>By <a href="https://github.com/IsaacAbrahamson" target="_blank">Isaac Abrahamson</a></h3>
+    </div>
+  </section>
+  <section id="usage">
+    <div class="content">
+      <p>Simple API for getting natural dates, calendar dates, and Unix timestamps (in milliseconds).
+        All returned information by default is in JSON format and UTC time.
+        Made with <a href="https://www.expressjs.com" target="_blank">Express</a> and 
+        <a href="https://sugarjs.com/dates/" target="_blank">Sugar.js</a> for 
+        <a href="https://www.freecodecamp.com/challenges/timestamp-microservice" target="_blank">Free Code Camp</a>.
+      </p>
+      <h3>Example endpoints:</h3>
+      <pre><code>/api/today</code></pre>
+      <pre><code>/api/yesterday</code></pre>
+      <pre><code>/api/now</code></pre>
+      <pre><code>/api/07-04-1776</code></pre>
+      <pre><code>/api/1776-07-04</code></pre>
+      <pre><code>/api/July 4, 1776</code></pre>
+      <pre><code>/api/the 4th of July</code></pre>
+      <pre><code>/api/July</code></pre>
+      <pre><code>/api/-6106060800000</code></pre>
+      <pre><code>/api/the 25th</code></pre>
+      <pre><code>/api/5 years ago</code></pre>
+      <pre><code>/api/two weeks from now</code></pre>
+      <pre><code>/api/Dec 1st of last year</code></pre>
+      <pre><code>/api/last day of June</code></pre>
+      <br>
+      <p>Please check out <a href="https://sugarjs.com/dates/" target="_blank">Sugar.js Dates</a> for more usage possibilies.</p>
+    </div>
+  </section>
+</body>
